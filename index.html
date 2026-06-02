@@ -145,6 +145,10 @@ footer{background:#0a1535;padding:48px 5% 28px}
 .social-links{display:flex;gap:8px}
 .social-btn{width:32px;height:32px;background:rgba(255,255,255,.07);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(255,255,255,.4);transition:all .2s}
 .social-btn:hover{background:#1a3a8f;color:#fff}
+.client-card{background:#fff;border:1.5px solid #e8ecf4;border-radius:16px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .2s}
+.client-card:hover{border-color:#3b82f6;transform:translateY(-3px);box-shadow:0 8px 30px rgba(26,58,143,.1)}
+.client-logo{width:56px;height:56px;background:#eff6ff;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px}
+.client-name{font-size:13px;font-weight:600;color:#0f1f5c;text-align:center;line-height:1.4}
 /* MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;display:none;align-items:center;justify-content:center;padding:20px}
 .modal-overlay.open{display:flex}
@@ -170,6 +174,38 @@ footer{background:#0a1535;padding:48px 5% 28px}
 .modal-note{font-size:12px;color:#9ca3af;margin-bottom:18px}
 .modal-wa-btn{width:100%;padding:13px;background:#25d366;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s}
 .modal-wa-btn:hover{background:#1db954}
+/* CARRITO */
+.cart-fab{position:fixed;bottom:100px;right:28px;z-index:998;background:#1a3a8f;color:#fff;border:none;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 6px 24px rgba(26,58,143,.35);transition:all .2s}
+.cart-fab:hover{background:#1e4fc2;transform:translateY(-2px)}
+.cart-badge{background:#ef4444;color:#fff;border-radius:50%;width:20px;height:20px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cart-panel{position:fixed;top:0;right:0;bottom:0;width:380px;background:#fff;z-index:600;box-shadow:-10px 0 50px rgba(0,0,0,.15);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .3s}
+.cart-panel.open{transform:translateX(0)}
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:599;display:none}
+.cart-overlay.open{display:block}
+.cart-header{padding:20px 24px;border-bottom:1px solid #e8ecf4;display:flex;align-items:center;justify-content:space-between}
+.cart-header h3{font-size:18px;font-weight:700;color:#0f1f5c}
+.cart-close{background:none;border:none;font-size:22px;cursor:pointer;color:#6b7280}
+.cart-items{flex:1;overflow-y:auto;padding:16px 24px}
+.cart-empty{text-align:center;padding:60px 20px;color:#9ca3af}
+.cart-empty-icon{font-size:48px;margin-bottom:12px}
+.cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid #f0f4ff;align-items:flex-start}
+.cart-item-img{width:60px;height:60px;object-fit:cover;border-radius:10px;background:#f0f4ff;flex-shrink:0}
+.cart-item-img-placeholder{width:60px;height:60px;background:#eff6ff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.cart-item-info{flex:1}
+.cart-item-name{font-size:13px;font-weight:600;color:#0f1f5c;margin-bottom:4px}
+.cart-item-price{font-size:12px;color:#3b82f6;font-weight:500;margin-bottom:8px}
+.cart-item-controls{display:flex;align-items:center;gap:8px}
+.qty-btn{width:26px;height:26px;border-radius:6px;border:1.5px solid #e8ecf4;background:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:600;color:#374151}
+.qty-btn:hover{background:#f0f4ff;border-color:#3b82f6}
+.qty-num{font-size:14px;font-weight:600;color:#0f1f5c;min-width:24px;text-align:center}
+.cart-item-remove{background:none;border:none;color:#ef4444;cursor:pointer;font-size:16px;margin-left:auto}
+.cart-footer{padding:20px 24px;border-top:1px solid #e8ecf4}
+.cart-summary{background:#f8faff;border-radius:12px;padding:14px;margin-bottom:16px}
+.cart-summary-row{display:flex;justify-content:space-between;font-size:13px;color:#6b7280;margin-bottom:6px}
+.cart-summary-row.total{font-weight:700;color:#0f1f5c;font-size:15px;margin-bottom:0;padding-top:8px;border-top:1px solid #e8ecf4}
+.cart-wa-btn{width:100%;padding:14px;background:#25d366;color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s}
+.cart-wa-btn:hover{background:#1db954}
+.cart-note{font-size:11px;color:#9ca3af;text-align:center;margin-top:10px}
 /* WA FLOAT */
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 6px 24px rgba(37,211,102,.4);cursor:pointer;transition:transform .2s}
 .wa-float:hover{transform:scale(1.1)}
@@ -201,7 +237,7 @@ footer{background:#0a1535;padding:48px 5% 28px}
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="logo">Lemus<span>Textiles</span></div>
+    <div class="logo"><img src="https://i.imgur.com/vV9Vn2w.jpeg" style="height:48px;width:auto;object-fit:contain" alt="Lemus Textiles"/></div>
     <div class="nav-links">
       <a href="#servicios">Servicios</a>
       <a href="#galeria">Productos</a>
@@ -269,6 +305,28 @@ footer{background:#0a1535;padding:48px 5% 28px}
   </div>
 </section>
 
+<!-- EMPRESAS -->
+<section style="background:#f8faff;padding:80px 5%">
+  <div class="section-inner">
+    <p class="section-tag">Clientes</p>
+    <h2 class="section-title">Empresas que confían en nosotros</h2>
+    <p class="section-sub">Organizaciones líderes en Bolivia que ya visten a sus equipos con Lemus Textiles.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px">
+      <div class="client-card"><div class="client-logo">🏢</div><div class="client-name">Carsa</div></div>
+      <div class="client-card"><div class="client-logo">🍗</div><div class="client-name">Pollos Copacabana</div></div>
+      <div class="client-card"><div class="client-logo">⛏️</div><div class="client-name">Grupo Minero Sinchi Wayra</div></div>
+      <div class="client-card"><div class="client-logo">✝️</div><div class="client-name">Cáritas Bolivia</div></div>
+      <div class="client-card"><div class="client-logo">🌍</div><div class="client-name">World Vision</div></div>
+      <div class="client-card"><div class="client-logo">🏥</div><div class="client-name">Cruz Roja Boliviana</div></div>
+      <div class="client-card"><div class="client-logo">💊</div><div class="client-name">Belmed</div></div>
+      <div class="client-card" style="background:linear-gradient(135deg,#1a3a8f,#3b82f6);border:none">
+        <div class="client-logo" style="background:rgba(255,255,255,0.15)">+</div>
+        <div class="client-name" style="color:#fff">Y muchos más...</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- GALERÍA DE PRODUCTOS -->
 <section class="gallery" id="galeria">
   <div class="section-inner">
@@ -289,12 +347,12 @@ footer{background:#0a1535;padding:48px 5% 28px}
     </div>
     <div class="products-grid" id="productsGrid"></div>
     <div class="show-more-wrap">
-      <a href="https://lemus-textiles.odoo.com/shop" target="_blank" class="btn-outline" style="display:inline-block;margin-top:8px">Ver catálogo completo en tienda →</a>
+      <button class="btn-outline" style="display:inline-block;margin-top:8px;cursor:pointer" onclick="document.getElementById('catTabs').querySelector('[data-cat=\'all\']').click();document.getElementById('galeria').scrollIntoView({behavior:'smooth'})">Ver todos los productos ↑</button>
     </div>
   </div>
 </section>
 
-<!-- POR QUÉ -->
+<!-- POR QUÉ + NÚMEROS FUSIONADOS -->
 <section class="why">
   <div class="section-inner">
     <p class="section-tag">¿Por qué elegirnos?</p>
@@ -305,6 +363,7 @@ footer{background:#0a1535;padding:48px 5% 28px}
       <div class="why-item"><div class="why-icon">🤝</div><div><h4>Atención directa para empresas</h4><p>Sin intermediarios. Asesoría personalizada desde el diseño hasta la entrega final.</p></div></div>
       <div class="why-item"><div class="why-icon">📦</div><div><h4>Pedidos por volumen</h4><p>Desde pequeños pedidos hasta lotes grandes con precios competitivos según cantidad.</p></div></div>
     </div>
+
   </div>
 </section>
 
@@ -362,6 +421,8 @@ footer{background:#0a1535;padding:48px 5% 28px}
     </div>
   </div>
 </section>
+
+
 
 <!-- CONTACTO -->
 <section class="contact-section" id="contacto">
@@ -437,7 +498,7 @@ footer{background:#0a1535;padding:48px 5% 28px}
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">Lemus<span>Textiles</span></div>
+        <div class="footer-logo"><img src="https://i.imgur.com/vV9Vn2w.jpeg" style="height:52px;width:auto;object-fit:contain;filter:brightness(0) invert(1)" alt="Lemus Textiles"/></div>
         <p class="footer-desc">Soluciones textiles corporativas para empresas bolivianas. Uniformes, mochilas, merchandising y accesorios desde La Paz, Bolivia.</p>
       </div>
       <div class="footer-col">
@@ -486,6 +547,32 @@ footer{background:#0a1535;padding:48px 5% 28px}
     </div>
   </div>
 </div>
+
+<!-- CARRITO PANEL -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>🛒 Tu pedido</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🛒</div>
+      <p>Tu carrito está vacío</p>
+      <p style="font-size:12px;margin-top:6px">Agrega productos del catálogo</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-summary" id="cartSummary"></div>
+    <button class="cart-wa-btn" onclick="sendCartWA()">💬 Pedir por WhatsApp</button>
+    <p class="cart-note">Te responderemos para confirmar disponibilidad, tallas y forma de pago</p>
+  </div>
+</div>
+
+<!-- CARRITO FAB -->
+<button class="cart-fab" id="cartFab" onclick="openCart()" style="display:none">
+  🛒 Mi pedido <span class="cart-badge" id="cartBadge">0</span>
+</button>
 
 <!-- WA FLOTANTE -->
 <div class="wa-float" onclick="toggleWA()" title="Escribir por WhatsApp">💬</div>
@@ -556,6 +643,112 @@ const productDetails={
   56:{desc:"Mochila corporativa confeccionada en material resistente de alta durabilidad, ideal para uso institucional, empresarial y promocional.",features:["Amplio compartimiento principal","Bolsillo frontal con cierre","Bolsillos laterales de malla","Diseño ergonómico","Bordado personalizado de alta calidad","Ideal para empresas, instituciones y eventos corporativos","Material resistente para uso diario"],prices:[["20–30","115","125"],["30–70","109","119"],["70–150","105","115"],["150+","96","105"]],note:"Pedido mínimo 20 unidades"},
 };
 
+// CARRITO
+let cart=[];
+
+function getPrice(prices,qty){
+  if(!prices||!prices.length)return null;
+  let p=prices[prices.length-1];
+  for(let r of prices){
+    const min=parseInt(r[0].split('–')[0].replace('+',''));
+    if(qty>=min)p=r;
+  }
+  return p;
+}
+
+function addToCart(id,name,cat,imgSrc,emoji){
+  const d=productDetails[id]||{};
+  const existing=cart.find(i=>i.id===id);
+  if(existing){
+    existing.qty+=10;
+  } else {
+    cart.push({id,name,cat,imgSrc,emoji,qty:20,prices:d.prices||[]});
+  }
+  updateCartUI();
+  openCart();
+}
+
+function removeFromCart(id){
+  cart=cart.filter(i=>i.id!==id);
+  updateCartUI();
+}
+
+function changeQty(id,delta){
+  const item=cart.find(i=>i.id===id);
+  if(item){
+    item.qty=Math.max(20,item.qty+delta);
+    updateCartUI();
+  }
+}
+
+function updateCartUI(){
+  const total=cart.reduce((s,i)=>s+i.qty,0);
+  const badge=document.getElementById('cartBadge');
+  const fab=document.getElementById('cartFab');
+  badge.textContent=cart.length;
+  fab.style.display=cart.length>0?'flex':'none';
+  const itemsEl=document.getElementById('cartItems');
+  const footer=document.getElementById('cartFooter');
+  if(cart.length===0){
+    itemsEl.innerHTML='<div class="cart-empty"><div class="cart-empty-icon">🛒</div><p>Tu carrito está vacío</p><p style="font-size:12px;margin-top:6px">Agrega productos del catálogo</p></div>';
+    footer.style.display='none';
+    return;
+  }
+  footer.style.display='block';
+  itemsEl.innerHTML=cart.map(item=>{
+    const pr=getPrice(item.prices,item.qty);
+    const unitPrice=pr?`Desde ${pr[1]} Bs s/fact`:'Consultar precio';
+    const imgHtml=item.imgSrc?`<img class="cart-item-img" src="${item.imgSrc}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="cart-item-img-placeholder" style="display:none">${item.emoji}</div>`:`<div class="cart-item-img-placeholder">${item.emoji}</div>`;
+    return `<div class="cart-item">
+      ${imgHtml}
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">${unitPrice}</div>
+        <div class="cart-item-controls">
+          <button class="qty-btn" onclick="changeQty(${item.id},-10)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${item.id},10)">+</button>
+          <span style="font-size:11px;color:#9ca3af">unidades</span>
+          <button class="cart-item-remove" onclick="removeFromCart(${item.id})">🗑</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  const summary=document.getElementById('cartSummary');
+  let rows=cart.map(item=>{
+    const pr=getPrice(item.prices,item.qty);
+    const price=pr?`${item.qty} × desde ${pr[1]} Bs`:'Precio a consultar';
+    return `<div class="cart-summary-row"><span>${item.name}</span><span>${price}</span></div>`;
+  }).join('');
+  const totalItems=cart.reduce((s,i)=>s+i.qty,0);
+  summary.innerHTML=rows+`<div class="cart-summary-row total"><span>Total unidades</span><span>${totalItems} prendas</span></div>`;
+}
+
+function openCart(){
+  document.getElementById('cartPanel').classList.add('open');
+  document.getElementById('cartOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeCart(){
+  document.getElementById('cartPanel').classList.remove('open');
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function sendCartWA(){
+  if(!cart.length)return;
+  let msg='Hola, quiero hacer un pedido de Lemus Textiles:\n\n';
+  cart.forEach(item=>{
+    const pr=getPrice(item.prices,item.qty);
+    const price=pr?`desde ${pr[1]} Bs s/fact c/u`:'precio a consultar';
+    msg+=`🛍 ${item.name} × ${item.qty} uds — ${price}\n`;
+  });
+  const total=cart.reduce((s,i)=>s+i.qty,0);
+  msg+=`\n📦 Total: ${total} prendas\n\nPor favor confirmen disponibilidad, tallas y forma de pago. ¡Gracias!`;
+  window.open(`https://wa.me/59176414777?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
 function openModal(id,name,cat,imgSrc,emoji){
   const d=productDetails[id]||{};
   const wrap=document.getElementById('modalImgWrap');
@@ -574,7 +767,18 @@ function openModal(id,name,cat,imgSrc,emoji){
     pt.innerHTML='';
   }
   document.getElementById('modalNote').textContent=d.note||'Pedido mínimo 20 unidades · Envío a coordinar';
-  document.getElementById('modalWaBtn').onclick=()=>cotizarProducto(name);
+        document.getElementById('modalWaBtn').onclick=()=>cotizarProducto(name);
+  // Botón agregar al carrito
+  const existingCartBtn=document.getElementById('modalCartBtn');
+  if(existingCartBtn)existingCartBtn.remove();
+  const cartBtn=document.createElement('button');
+  cartBtn.id='modalCartBtn';
+  cartBtn.innerHTML='🛒 Agregar al carrito';
+  cartBtn.style.cssText='width:100%;padding:13px;background:#1a3a8f;color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:10px;transition:background .2s';
+  cartBtn.onmouseover=()=>cartBtn.style.background='#1e4fc2';
+  cartBtn.onmouseout=()=>cartBtn.style.background='#1a3a8f';
+  cartBtn.onclick=()=>{addToCart(id,name,cat,imgSrc,emoji);closeModal();};
+  document.getElementById('modalWaBtn').before(cartBtn);
   document.getElementById('productModal').classList.add('open');
   document.body.style.overflow='hidden';
 }
