@@ -145,6 +145,67 @@ footer{background:#0a1535;padding:48px 5% 28px}
 .social-links{display:flex;gap:8px}
 .social-btn{width:32px;height:32px;background:rgba(255,255,255,.07);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(255,255,255,.4);transition:all .2s}
 .social-btn:hover{background:#1a3a8f;color:#fff}
+.client-card{background:#fff;border:1.5px solid #e8ecf4;border-radius:16px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .2s}
+.client-card:hover{border-color:#3b82f6;transform:translateY(-3px);box-shadow:0 8px 30px rgba(26,58,143,.1)}
+.client-logo{width:56px;height:56px;background:#eff6ff;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px}
+.client-name{font-size:13px;font-weight:600;color:#0f1f5c;text-align:center;line-height:1.4}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:20px;max-width:560px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,.2)}
+.modal-header{position:relative;padding:24px 24px 0}
+.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;background:#f3f4f6;border:none;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#6b7280}
+.modal-img{width:100%;height:200px;object-fit:cover;border-radius:14px;margin-bottom:16px;background:#f0f4ff}
+.modal-img-placeholder{width:100%;height:200px;background:linear-gradient(135deg,#eff6ff,#dbeafe);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:56px;margin-bottom:16px}
+.modal-cat{font-size:11px;font-weight:600;color:#3b82f6;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.modal-title{font-size:22px;font-weight:700;color:#0f1f5c;margin-bottom:12px}
+.modal-body{padding:0 24px 24px}
+.modal-desc{font-size:14px;color:#4a5568;line-height:1.7;margin-bottom:16px}
+.modal-features{list-style:none;margin-bottom:18px}
+.modal-features li{font-size:13px;color:#374151;padding:5px 0;border-bottom:1px solid #f3f4f6;display:flex;align-items:flex-start;gap:8px}
+.modal-features li::before{content:'✅';font-size:12px;flex-shrink:0;margin-top:1px}
+.modal-price-title{font-size:13px;font-weight:600;color:#0f1f5c;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.price-table{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:13px}
+.price-table th{background:#1a3a8f;color:#fff;padding:8px 12px;text-align:left;font-weight:600}
+.price-table th:first-child{border-radius:8px 0 0 0}
+.price-table th:last-child{border-radius:0 8px 0 0}
+.price-table td{padding:8px 12px;border-bottom:1px solid #f0f4ff;color:#374151}
+.price-table tr:hover td{background:#f8faff}
+.modal-note{font-size:12px;color:#9ca3af;margin-bottom:18px}
+.modal-wa-btn{width:100%;padding:13px;background:#25d366;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s}
+.modal-wa-btn:hover{background:#1db954}
+/* CARRITO */
+.cart-fab{position:fixed;bottom:100px;right:28px;z-index:998;background:#1a3a8f;color:#fff;border:none;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 6px 24px rgba(26,58,143,.35);transition:all .2s}
+.cart-fab:hover{background:#1e4fc2;transform:translateY(-2px)}
+.cart-badge{background:#ef4444;color:#fff;border-radius:50%;width:20px;height:20px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cart-panel{position:fixed;top:0;right:0;bottom:0;width:380px;background:#fff;z-index:600;box-shadow:-10px 0 50px rgba(0,0,0,.15);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .3s}
+.cart-panel.open{transform:translateX(0)}
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:599;display:none}
+.cart-overlay.open{display:block}
+.cart-header{padding:20px 24px;border-bottom:1px solid #e8ecf4;display:flex;align-items:center;justify-content:space-between}
+.cart-header h3{font-size:18px;font-weight:700;color:#0f1f5c}
+.cart-close{background:none;border:none;font-size:22px;cursor:pointer;color:#6b7280}
+.cart-items{flex:1;overflow-y:auto;padding:16px 24px}
+.cart-empty{text-align:center;padding:60px 20px;color:#9ca3af}
+.cart-empty-icon{font-size:48px;margin-bottom:12px}
+.cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid #f0f4ff;align-items:flex-start}
+.cart-item-img{width:60px;height:60px;object-fit:cover;border-radius:10px;background:#f0f4ff;flex-shrink:0}
+.cart-item-img-placeholder{width:60px;height:60px;background:#eff6ff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.cart-item-info{flex:1}
+.cart-item-name{font-size:13px;font-weight:600;color:#0f1f5c;margin-bottom:4px}
+.cart-item-price{font-size:12px;color:#3b82f6;font-weight:500;margin-bottom:8px}
+.cart-item-controls{display:flex;align-items:center;gap:8px}
+.qty-btn{width:26px;height:26px;border-radius:6px;border:1.5px solid #e8ecf4;background:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:600;color:#374151}
+.qty-btn:hover{background:#f0f4ff;border-color:#3b82f6}
+.qty-num{font-size:14px;font-weight:600;color:#0f1f5c;min-width:24px;text-align:center}
+.cart-item-remove{background:none;border:none;color:#ef4444;cursor:pointer;font-size:16px;margin-left:auto}
+.cart-footer{padding:20px 24px;border-top:1px solid #e8ecf4}
+.cart-summary{background:#f8faff;border-radius:12px;padding:14px;margin-bottom:16px}
+.cart-summary-row{display:flex;justify-content:space-between;font-size:13px;color:#6b7280;margin-bottom:6px}
+.cart-summary-row.total{font-weight:700;color:#0f1f5c;font-size:15px;margin-bottom:0;padding-top:8px;border-top:1px solid #e8ecf4}
+.cart-wa-btn{width:100%;padding:14px;background:#25d366;color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s}
+.cart-wa-btn:hover{background:#1db954}
+.cart-note{font-size:11px;color:#9ca3af;text-align:center;margin-top:10px}
 /* WA FLOAT */
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 6px 24px rgba(37,211,102,.4);cursor:pointer;transition:transform .2s}
 .wa-float:hover{transform:scale(1.1)}
@@ -176,7 +237,7 @@ footer{background:#0a1535;padding:48px 5% 28px}
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="logo">Lemus<span>Textiles</span></div>
+    <div class="logo"><img src="https://i.imgur.com/vV9Vn2w.jpeg" style="height:48px;width:auto;object-fit:contain" alt="Lemus Textiles"/></div>
     <div class="nav-links">
       <a href="#servicios">Servicios</a>
       <a href="#galeria">Productos</a>
@@ -244,6 +305,28 @@ footer{background:#0a1535;padding:48px 5% 28px}
   </div>
 </section>
 
+<!-- EMPRESAS -->
+<section style="background:#f8faff;padding:80px 5%">
+  <div class="section-inner">
+    <p class="section-tag">Clientes</p>
+    <h2 class="section-title">Empresas que confían en nosotros</h2>
+    <p class="section-sub">Organizaciones líderes en Bolivia que ya visten a sus equipos con Lemus Textiles.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px">
+      <div class="client-card"><div class="client-logo">🏢</div><div class="client-name">Carsa</div></div>
+      <div class="client-card"><div class="client-logo">🍗</div><div class="client-name">Pollos Copacabana</div></div>
+      <div class="client-card"><div class="client-logo">⛏️</div><div class="client-name">Grupo Minero Sinchi Wayra</div></div>
+      <div class="client-card"><div class="client-logo">✝️</div><div class="client-name">Cáritas Bolivia</div></div>
+      <div class="client-card"><div class="client-logo">🌍</div><div class="client-name">World Vision</div></div>
+      <div class="client-card"><div class="client-logo">🏥</div><div class="client-name">Cruz Roja Boliviana</div></div>
+      <div class="client-card"><div class="client-logo">💊</div><div class="client-name">Belmed</div></div>
+      <div class="client-card" style="background:linear-gradient(135deg,#1a3a8f,#3b82f6);border:none">
+        <div class="client-logo" style="background:rgba(255,255,255,0.15)">+</div>
+        <div class="client-name" style="color:#fff">Y muchos más...</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- GALERÍA DE PRODUCTOS -->
 <section class="gallery" id="galeria">
   <div class="section-inner">
@@ -264,12 +347,12 @@ footer{background:#0a1535;padding:48px 5% 28px}
     </div>
     <div class="products-grid" id="productsGrid"></div>
     <div class="show-more-wrap">
-      <a href="https://lemus-textiles.odoo.com/shop" target="_blank" class="btn-outline" style="display:inline-block;margin-top:8px">Ver catálogo completo en tienda →</a>
+      <button class="btn-outline" style="display:inline-block;margin-top:8px;cursor:pointer" onclick="document.getElementById('catTabs').querySelector('[data-cat=\'all\']').click();document.getElementById('galeria').scrollIntoView({behavior:'smooth'})">Ver todos los productos ↑</button>
     </div>
   </div>
 </section>
 
-<!-- POR QUÉ -->
+<!-- POR QUÉ + NÚMEROS FUSIONADOS -->
 <section class="why">
   <div class="section-inner">
     <p class="section-tag">¿Por qué elegirnos?</p>
@@ -280,6 +363,7 @@ footer{background:#0a1535;padding:48px 5% 28px}
       <div class="why-item"><div class="why-icon">🤝</div><div><h4>Atención directa para empresas</h4><p>Sin intermediarios. Asesoría personalizada desde el diseño hasta la entrega final.</p></div></div>
       <div class="why-item"><div class="why-icon">📦</div><div><h4>Pedidos por volumen</h4><p>Desde pequeños pedidos hasta lotes grandes con precios competitivos según cantidad.</p></div></div>
     </div>
+
   </div>
 </section>
 
@@ -337,6 +421,8 @@ footer{background:#0a1535;padding:48px 5% 28px}
     </div>
   </div>
 </section>
+
+
 
 <!-- CONTACTO -->
 <section class="contact-section" id="contacto">
@@ -412,7 +498,7 @@ footer{background:#0a1535;padding:48px 5% 28px}
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">Lemus<span>Textiles</span></div>
+        <div class="footer-logo"><img src="https://i.imgur.com/vV9Vn2w.jpeg" style="height:52px;width:auto;object-fit:contain;filter:brightness(0) invert(1)" alt="Lemus Textiles"/></div>
         <p class="footer-desc">Soluciones textiles corporativas para empresas bolivianas. Uniformes, mochilas, merchandising y accesorios desde La Paz, Bolivia.</p>
       </div>
       <div class="footer-col">
@@ -442,6 +528,52 @@ footer{background:#0a1535;padding:48px 5% 28px}
   </div>
 </footer>
 
+<!-- MODAL -->
+<div class="modal-overlay" id="productModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modalImgWrap"></div>
+      <div class="modal-cat" id="modalCat"></div>
+      <div class="modal-title" id="modalTitle"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-desc" id="modalDesc"></div>
+      <ul class="modal-features" id="modalFeatures"></ul>
+      <div class="modal-price-title" id="modalPriceTitle"></div>
+      <table class="price-table" id="modalPriceTable"></table>
+      <div class="modal-note" id="modalNote"></div>
+      <button class="modal-wa-btn" id="modalWaBtn">💬 Cotizar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- CARRITO PANEL -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>🛒 Tu pedido</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🛒</div>
+      <p>Tu carrito está vacío</p>
+      <p style="font-size:12px;margin-top:6px">Agrega productos del catálogo</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-summary" id="cartSummary"></div>
+    <button class="cart-wa-btn" onclick="sendCartWA()">💬 Pedir por WhatsApp</button>
+    <p class="cart-note">Te responderemos para confirmar disponibilidad, tallas y forma de pago</p>
+  </div>
+</div>
+
+<!-- CARRITO FAB -->
+<button class="cart-fab" id="cartFab" onclick="openCart()" style="display:none">
+  🛒 Mi pedido <span class="cart-badge" id="cartBadge">0</span>
+</button>
+
 <!-- WA FLOTANTE -->
 <div class="wa-float" onclick="toggleWA()" title="Escribir por WhatsApp">💬</div>
 <div class="wa-panel" id="waPanel">
@@ -459,6 +591,203 @@ footer{background:#0a1535;padding:48px 5% 28px}
 </div>
 
 <script>
+const productDetails={
+  3:{desc:"Elaborada en lona americana resistente. Detalles en cuerina para acabado premium.",features:["Compartimento principal amplio","Bolsillo frontal con cierre","Porta laptop acolchado y cierre anti robo en la espalda","1 bordado computarizado","Diseño moderno y profesional","Personalizable a gusto del cliente"],prices:[["20–30","105","115"],["30–70","99","109"],["70–150","96","104"],["150+","86","95"]],note:"Pedido mínimo 20 unidades · Envío a coordinar"},
+  4:{desc:"Elaborada en lona americana resistente.",features:["2 compartimientos funcionales","Porta laptop acolchado","Cierre de seguridad (antirrobo)","Diseño cómodo para uso diario","Personalizable a gusto del cliente"],prices:[["20–30","105","115"],["30–70","95","106"],["70–150","89","99"],["150+","85","95"]],note:"Pedido mínimo 20 unidades"},
+  5:{desc:"Confeccionada en lona americana resistente.",features:["3 compartimientos funcionales","Porta laptop acolchado","Cierre de seguridad (antirrobo)","Diseño ejecutivo para uso diario","Personalizable con logo"],medidas:"40 × 30 × 20 cm",prices:[["20–30","105","115"],["30–70","95","109"],["70–150","89","101"],["150+","85","95"]],note:"Pedido mínimo 20 unidades"},
+  6:{desc:"Mochila elaborada en tela lona americana de 3 compartimientos, cuenta con cierre anti robo, porta laptop y bordados.",features:["3 compartimientos","Cierre anti robo","Porta laptop","Bordado incluido"],prices:[["20–30","99","115"],["30–70","95","105"],["70–150","85","96"],["150+","79","89"]],note:"Pedido mínimo 20 unidades · Envío a coordinar"},
+  7:{desc:"Mochila de dos compartimientos, en tela lona americana jaspeada, cuenta con bordado, cierre anti robo, espaldar acolchado, y porta laptop.",features:["2 compartimientos","Tela lona americana jaspeada","Bordado incluido","Cierre anti robo","Espaldar acolchado","Porta laptop"],prices:[["20–30","105","115"],["30–70","95","109"],["70–150","89","101"],["150+","85","95"]],note:"Pedido mínimo 20 unidades"},
+  8:{desc:"Mochila elaborada en tela lona americana con porta laptop y cierre anti robo, cuenta con bordado. 40 cm alto × 35 cm ancho.",features:["3 compartimientos","Porta laptop","Cierre anti robo","Bordado incluido","40 cm alto × 35 cm ancho"],prices:[["20–30","109","125"],["30–70","105","115"],["70–150","99","109"],["150+","95","105"]],note:"Pedido mínimo 20 unidades"},
+  9:{desc:"Mochila de dos compartimientos convertible en maletín con correa. Mide 40 cm alto × 30 ancho.",features:["2 compartimientos","Convertible en maletín con correa","40 cm alto × 30 cm ancho","Personalizable con logo"],prices:[["20–30","115","125"],["30–70","109","119"],["70–150","105","115"],["150+","99","109"]],note:"Pedido mínimo 20 unidades"},
+  10:{desc:"Maletín elaborado en tela lona americana de un compartimiento.",features:["1 compartimiento principal","Bordado de alta calidad","Correa de 4 cm ajustable","Porta laptop acolchado"],prices:[["20–30","95","105"],["30–70","89","99"],["70–150","85","96"],["150+","79","89"]],note:"Pedido mínimo 20 unidades"},
+  11:{desc:"Elaborada en tela lona americana primera calidad.",features:["2 compartimientos","Porta laptop acolchado","Cierre anti robo","1 bordado o estampado de alta calidad"],prices:[["20–30","99","109"],["30–70","93","104"],["70–150","85","96"],["150+","79","87"]],note:"Pedido mínimo 20 unidades"},
+  17:{desc:"Mochila elaborada en tela lona americana. Mide 30 cm alto × 25 cm ancho × 15 cm base.",features:["Espaldar acolchado","Bordado de alta calidad","30 cm alto × 25 cm ancho × 15 cm base"],prices:[["20–30","78","89"],["30–70","75","84"],["70–150","69","79"],["150+","65","75"]],note:"Pedido mínimo 20 unidades"},
+  24:{desc:"Elaborada en tela lona americana primera calidad. Liviana y resistente.",features:["Mochila liviana y resistente","Ideal para eventos, campañas y uso institucional","Compartimento principal con cierre","Diseño funcional para uso diario","Personalizable con logo y gráfica institucional"],prices:[["20–30","105","115"],["30–70","95","109"],["70–150","89","101"],["150+","85","95"]],note:"Pedido mínimo 20 unidades"},
+  45:{desc:"Mochila Deportiva Personalizada. Diseñada para equipos deportivos, instituciones educativas y empresas.",features:["Fabricada en material de alta durabilidad y fácil limpieza","Amplio compartimento principal para ropa o material deportivo","Bolsillo frontal con cierre","Bolsillos laterales de malla para botellas","Espaldar y correas acolchadas","Personalización con logo mediante bordado o estampado","Ideal para colegios, clubes deportivos y eventos corporativos"],prices:[],note:"Consultar precio por WhatsApp"},
+  12:{desc:"Maletín deportivo. 60 cm de alto × 40 de ancho. Se convierte en mochila con colgadores acolchados.",features:["Convertible en mochila con colgadores acolchados","60 cm alto × 40 cm ancho","Personalizable con logo"],prices:[["20–30","105","115"],["30–70","99","109"],["70–120","95","104"],["120+","90","99"]],note:"Pedido mínimo 20 unidades · Envío a coordinar"},
+  40:{desc:"Maletín de viaje Wistus en tela resistente y duradera. Ideal para viajes cortos, trabajo y uso corporativo.",features:["Amplio compartimento principal con cierre","Bolsillo frontal de fácil acceso","Correa ajustable para transporte cómodo","Diseño práctico y profesional","60 cm de ancho × 40 alto"],prices:[["20–30","155","170"],["30–70","149","165"],["70–150","140","155"],["150+","135","149"]],note:"Pedido mínimo 20 unidades"},
+  13:{desc:"Estuche elaborado en tela lona americana. Tamaño 15 cm × 6 cm. Cuenta con bordados.",features:["Tela lona americana","Bordado incluido","15 cm × 6 cm","Personalizable con logo"],prices:[["20–30","25","29"],["30–70","22","25"],["70–150","19","22"],["150+","17","20"]],note:"Pedido mínimo 20 unidades"},
+  14:{desc:"Elaborado en tela lona americana. Mide 30 cm × 25 cm. Cuenta con bordados.",features:["Tela lona americana","30 cm × 25 cm","Bordado incluido","Personalizable con logo"],prices:[["20–30","49","55"],["30–70","45","50"],["70–150","41","46"],["150+","36","41"]],note:"Pedido mínimo 20 unidades"},
+  15:{desc:"Elaborada en tela lona americana de primera calidad.",features:["Material de alta durabilidad y fácil limpieza","Amplio compartimento principal","Bolsillo frontal con cierre","Bolsillos laterales de malla","Espaldar y correas acolchadas","Personalización con logo mediante bordado o estampado","Colores personalizables","Pedido mínimo 20 unidades"],prices:[["20–30","53","59"],["30–70","50","55"],["70–150","47","51"],["150+","44","48"]],note:"Pedido mínimo 20 unidades"},
+  18:{desc:"Elaborada en tela lona americana. Personalizable a gusto del cliente. Bordado de alta calidad.",features:["Tela lona americana","Bordado de alta calidad","Personalizable a gusto del cliente"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  20:{desc:"Fabricada en tela nylon resistente y de larga duración.",features:["Diseño ligero y fácil de transportar","Sistema de cierre mediante cordones reforzados","Bolsillo frontal con cierre","Personalización con logo institucional o corporativo","Ideal para ferias, capacitaciones y eventos","Fácil de almacenar y distribuir en grandes cantidades","Material: Taslam impermeable"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  53:{desc:"Cartera Corporativa Personalizada. Confeccionada en material taslam tejido, diseñada para uso corporativo, promocional e institucional.",features:["Material taslam tejido","Bordado de primera calidad con logo corporativo","Asas cómodas y reforzadas","Diseño moderno y elegante","Ideal para merchandising empresarial y regalos corporativos"],prices:[["20–30","116","125"],["30–70","109","119"],["70–150","106","115"],["150+","99","109"]],note:"Pedido mínimo 20 unidades"},
+  54:{desc:"Morral Corporativa Personalizada. Confeccionada en tela lona americana de primera calidad.",features:["Lona americana de primera calidad","Bordado de primera calidad con logo corporativo","Asas cómodas y reforzadas","Cierres número 8 y llaves de primera calidad","Ideal para merchandising empresarial y regalos corporativos"],prices:[["20–30","84","92"],["30–70","81","89"],["70–150","78","85"],["150+","75","82"]],note:"Pedido mínimo 20 unidades"},
+  55:{desc:"Cartera Corporativa Personalizada – Acabado Premium. Confeccionada en material sintético brillante de alta resistencia.",features:["Material cuerina charol","Impresión personalizada con logo corporativo","Asas cómodas y reforzadas","Diseño moderno y elegante","Ideal para merchandising empresarial y regalos corporativos"],prices:[["20–30","67","74"],["30–70","62","69"],["70–150","59","65"],["150+","57","62"]],note:"Pedido mínimo 20 unidades"},
+  21:{desc:"Confeccionada en tela softshell: resistente, flexible y cómoda.",features:["Protección contra viento y bajas temperaturas","Interior suave que brinda abrigo sin ser pesada","Cierre frontal completo","Bolsillos laterales con cierre","Corte moderno y profesional","Ideal para uso corporativo y trabajo en exteriores","Personalizable con logo (bordado o estampado)"],prices:[["20–30","160","175"],["30–70","156","169"],["70–150","149","165"],["150+","145","159"]],note:"Pedido mínimo 20 unidades"},
+  22:{desc:"Chamarra rompeviento con forro interno de red (malla).",features:["Exterior rompeviento e impermeable","Forro interno de red (malla)","Liviana y cómoda","Bolsillos con cierre y capucha ajustable","Personalizable con logo"],prices:[["20–30","136","149"],["30–70","129","142"],["70–150","125","137"],["150+","122","133"]],note:"Pedido mínimo 20 unidades"},
+  23:{desc:"Chamarra rompeviento con forro interno polar térmico.",features:["Exterior rompeviento e impermeable","Forro interno polar térmico","Mayor abrigo para climas fríos","Bolsillos con cierre y capucha ajustable","Personalizable en colores y logo"],prices:[["20–30","165","179"],["30–70","159","172"],["70–150","152","165"],["150+","145","159"]],note:"Pedido mínimo 20 unidades"},
+  25:{desc:"Confeccionada en tela polar térmica.",features:["Tela polar térmica","Brinda abrigo y comodidad","Cierre frontal completo","Bolsillos laterales con cierre","Diseño funcional para uso diario","Personalizable con logo"],prices:[["20–30","109","119"],["30–70","105","115"],["70–150","99","109"],["150+","95","105"]],note:"Pedido mínimo 20 unidades"},
+  26:{desc:"Diseño bomber moderno. Material resistente para uso diario.",features:["Tela taslam impermeable con fibra siliconada en el interior","Cierre frontal completo","Puños y pretina en rib","Bolsillos laterales funcionales","Personalizable con logo"],prices:[["20–30","174","189"],["30–70","169","185"],["70–150","166","179"],["150+","160","175"]],note:"Pedido mínimo 20 unidades"},
+  27:{desc:"Parca Térmica Corporativa. Confeccionada en material térmico e impermeable (Kaki primera calidad o taslam impermeable).",features:["Protección contra frío, viento y clima extremo","Forro interno de algodón o polar y fibra siliconada para mayor abrigo","Cierre frontal reforzado y botones de seguridad","Bolsillos amplios y funcionales","Capucha integrada","Personalizable con logo"],prices:[["20–30","265","279"],["30–70","256","274"],["70–150","254","265"],["150+","245","259"]],note:"Pedido mínimo 20 unidades"},
+  41:{desc:"Chamarra elaborada en tela mojada con forro polar.",features:["Tela mojada impermeable con forro polar","Fibra siliconada en el interior","Cierre resistente koreano de primera calidad","Incluye 1 logotipo bordado"],prices:[["20–30","160","175"],["30–70","156","169"],["70–150","149","165"],["150+","145","159"]],note:"Pedido mínimo 20 unidades"},
+  42:{desc:"Chamarra ligera con materiales de alta calidad.",features:["Material Exterior: Taslam Arrugado","Material Interior: Forro de punto tecnológico 100% Poliéster","Cierre Central: Cierre de Nylon Koreano","Dos bolsillos laterales con cierre","Cuello alto con forro interior en contraste","Bordado de alta definición en el pecho"],prices:[["20–30","152","165"],["30–70","148","159"],["70–150","145","152"],["150+","139","145"]],note:"Pedido mínimo 20 unidades"},
+  43:{desc:"Parcas rompevientos con protección total contra el clima.",features:["Exterior en tela taslam rompevientos de alta densidad impermeable","Forro interno de red (malla) para gestión de humedad","Estructura liviana y cómoda","Bolsillos laterales con cierre de seguridad","Capucha técnica ajustable","Ideal para uniformes corporativos y actividades al aire libre"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  28:{desc:"Confeccionado en tela mojada impermeable.",features:["Tela mojada impermeable","Acolchado interno para mayor abrigo","Liviano, cómodo y resistente","Cierre frontal reforzado","Ideal para trabajo y uso corporativo","Personalizable con logo"],prices:[["20–30","109","119"],["30–70","105","115"],["70–150","101","109"],["150+","97","105"]],note:"Pedido mínimo 20 unidades"},
+  29:{desc:"Elaborado en tela kaki primera o segunda calidad con forro micropolar o plusher.",features:["Tela kaki primera o segunda calidad","Forro en tela micropolar o plusher","Múltiples bolsillos con cierre y scratch","Logotipo bordado de alta calidad","Personalizable a gusto del cliente"],prices:[["20–30","126","135"],["30–70","118","129"],["70–150","112","124"],["150+","108","119"]],note:"Pedido mínimo 20 unidades"},
+  30:{desc:"Diseñado para brindar visibilidad, comodidad y resistencia en entornos laborales. Ideal para personal operativo, brigadas, supervisores y construcción.",features:["Fabricado en tela Prada de alta resistencia","Cierre frontal reforzado","Cinta reflectiva horizontal de alta visibilidad","Bolsillos laterales funcionales con cierre","Diseño ligero para jornadas prolongadas","Personalización con bordado o estampado","Colores: naranja, verde flúor y otros a solicitud","Uso industrial, construcción, logística y minería"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  31:{desc:"Material: Tela taslam jaipura, acolchado con fibra siliconada.",features:["Tela taslam jaipura con fibra siliconada","Multibolsillo con cierre y tapa con scratch","Bordado de alta calidad","Cierre koreano de primera calidad"],prices:[["20–30","119","129"],["30–70","116","125"],["70–150","112","122"],["150+","109","118"]],note:"Pedido mínimo 20 unidades"},
+  32:{desc:"Elaborado en tela micropolar o micropolar pluhser.",features:["Tela micropolar o micropolar pluhser","Cierre koreano de primera calidad","Bolsillos laterales y central con cierre","1 logotipo bordado"],prices:[["20–30","86","95"],["30–70","82","89"],["70–150","79","85"],["150+","75","81"]],note:"Pedido mínimo 20 unidades"},
+  49:{desc:"Elaborado en tela kaki primera o segunda calidad con forro interno de red.",features:["Tela kaki primera o segunda calidad","Forro interno en tela red","Múltiples bolsillos con cierre y scratch","Logotipo bordado de alta calidad","Personalizable a gusto del cliente"],prices:[["20–30","106","115"],["30–70","103","112"],["70–150","99","109"],["150+","96","105"]],note:"Pedido mínimo 20 unidades"},
+  50:{desc:"Elaborado en tela kaki primera o segunda calidad con forro interno de red.",features:["Tela kaki primera o segunda calidad","Forro interno en tela red","Múltiples bolsillos con cierre y scratch","Logotipo bordado de alta calidad","Personalizable a gusto del cliente"],prices:[["20–30","106","115"],["30–70","103","112"],["70–150","99","109"],["150+","96","105"]],note:"Pedido mínimo 20 unidades"},
+  33:{desc:"Tela algodón sebatex o french terry frizado.",features:["Tela algodón sebatex o french terry frizado","Bordado o estampado de primera calidad","Personalizable con logo institucional"],prices:[["20–30","147","159"],["30–70","142","155"],["70–150","138","149"],["150+","134","145"]],note:"Pedido mínimo 20 unidades"},
+  34:{desc:"Canguro moderno y versátil, ideal para instituciones educativas, empresas y eventos corporativos.",features:["Tela de alta calidad y excelente acabado","Capucha con cordones ajustables","Bolsillo frontal tipo canguro de gran capacidad","Personalización mediante vinil textil de alta resistencia","Interior suave y cómodo","Disponible en diferentes colores y tallas","Material: Frisa, algodón o según requerimiento","Tallas: XS hasta XXL"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  35:{desc:"Diseñado para brindar protección, comodidad y durabilidad en entornos exigentes. Ideal para mantenimiento, industria, construcción y minería.",features:["Elaborado en tela kaki de primera o segunda calidad","Diseño de una sola pieza para mayor protección","Cierre frontal reforzado de alta resistencia","Bolsillos funcionales en pecho, laterales y piernas","Costuras reforzadas para uso intensivo","Cintura con ajuste ergonómico","Personalización con bordado o estampado","Disponible con cintas reflectivas","Tallas: S hasta XXL"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  36:{desc:"Overol térmico elaborado en tela kaki acolchado con fibra siliconada interior en tela taslam.",features:["Tela kaki acolchada con fibra siliconada","Cintas reflectivas","Bordado de alta calidad","Capucha incorporada","Forro interior","Costuras reforzadas y troquelado","Bolsillos en el pecho con cierre tractor"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  51:{desc:"Overol térmico de alta exigencia para trabajos en bajas temperaturas.",features:["Tela kaki de primera calidad, resistente y durable","Relleno con fibra siliconada premium para mayor aislamiento térmico","Forro interior en tela micropolar de primera calidad","Cintas reflectivas de 5 cm para mayor visibilidad","Cierres tractor reforzados de alta resistencia","Ideal para empresas mineras, industriales y trabajos de alta exigencia"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  52:{desc:"Overol de trabajo confeccionado en tela kaki de primera calidad.",features:["Tela kaki de primera calidad","Costuras reforzadas para mayor resistencia","Acabado troquelado de alta precisión","Cintas reflectivas de 5 cm de primera calidad","Diseño cómodo, resistente y funcional","Ideal para minería, construcción, talleres e industrias"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  37:{desc:"Polo confeccionado en tela piqué de algodón, cómodo y resistente, ideal para uso corporativo o promocional.",features:["Tela piqué de algodón","Diseño clásico con cuello","Personalización con logo","Excelente acabado","Ideal para uso corporativo y promocional"],prices:[["20–30","105","115"],["30–70","99","109"],["70–150","95","105"],["150+","90","99"]],note:"Pedido mínimo 20 unidades"},
+  38:{desc:"Polera sublimada personalizada.",features:["Sublimación de alta calidad","Diseños a todo color","Personalizable con logo, nombre o diseño corporativo","Pedido mínimo 20 unidades","Envío a coordinar"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  39:{desc:"Gorra en tela kaki, práctica, resistente y cómoda. Ideal para empresas, instituciones y eventos corporativos.",features:["Tela kaki de alta resistencia","Diseño ergonómico y cómodo","Visera reforzada","Ajuste posterior regulable","Personalización mediante bordado o estampado","Gorra de 5 o 6 paneles","Tallas estándar para adultos","Colores personalizables"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  44:{desc:"Diseñado para máxima protección en trabajos al aire libre. Ideal para personal de campo, construcción, minería y actividades corporativas.",features:["Tela kaki de alta resistencia","Ala ancha para mayor protección solar","Diseño ligero y cómodo","Costuras reforzadas","Correa de ajuste opcional","Personalización mediante bordado o estampado","Uso industrial, agrícola, minero y forestal"],prices:[],note:"Consultar precio por WhatsApp · Pedido mínimo 20 unidades"},
+  56:{desc:"Mochila corporativa confeccionada en material resistente de alta durabilidad, ideal para uso institucional, empresarial y promocional.",features:["Amplio compartimiento principal","Bolsillo frontal con cierre","Bolsillos laterales de malla","Diseño ergonómico","Bordado personalizado de alta calidad","Ideal para empresas, instituciones y eventos corporativos","Material resistente para uso diario"],prices:[["20–30","115","125"],["30–70","109","119"],["70–150","105","115"],["150+","96","105"]],note:"Pedido mínimo 20 unidades"},
+};
+
+// CARRITO
+let cart=[];
+
+function getPrice(prices,qty){
+  if(!prices||!prices.length)return null;
+  let p=prices[prices.length-1];
+  for(let r of prices){
+    const min=parseInt(r[0].split('–')[0].replace('+',''));
+    if(qty>=min)p=r;
+  }
+  return p;
+}
+
+function addToCart(id,name,cat,imgSrc,emoji){
+  const d=productDetails[id]||{};
+  const existing=cart.find(i=>i.id===id);
+  if(existing){
+    existing.qty+=10;
+  } else {
+    cart.push({id,name,cat,imgSrc,emoji,qty:20,prices:d.prices||[]});
+  }
+  updateCartUI();
+  openCart();
+}
+
+function removeFromCart(id){
+  cart=cart.filter(i=>i.id!==id);
+  updateCartUI();
+}
+
+function changeQty(id,delta){
+  const item=cart.find(i=>i.id===id);
+  if(item){
+    item.qty=Math.max(20,item.qty+delta);
+    updateCartUI();
+  }
+}
+
+function updateCartUI(){
+  const total=cart.reduce((s,i)=>s+i.qty,0);
+  const badge=document.getElementById('cartBadge');
+  const fab=document.getElementById('cartFab');
+  badge.textContent=cart.length;
+  fab.style.display=cart.length>0?'flex':'none';
+  const itemsEl=document.getElementById('cartItems');
+  const footer=document.getElementById('cartFooter');
+  if(cart.length===0){
+    itemsEl.innerHTML='<div class="cart-empty"><div class="cart-empty-icon">🛒</div><p>Tu carrito está vacío</p><p style="font-size:12px;margin-top:6px">Agrega productos del catálogo</p></div>';
+    footer.style.display='none';
+    return;
+  }
+  footer.style.display='block';
+  itemsEl.innerHTML=cart.map(item=>{
+    const pr=getPrice(item.prices,item.qty);
+    const unitPrice=pr?`Desde ${pr[1]} Bs s/fact`:'Consultar precio';
+    const imgHtml=item.imgSrc?`<img class="cart-item-img" src="${item.imgSrc}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="cart-item-img-placeholder" style="display:none">${item.emoji}</div>`:`<div class="cart-item-img-placeholder">${item.emoji}</div>`;
+    return `<div class="cart-item">
+      ${imgHtml}
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">${unitPrice}</div>
+        <div class="cart-item-controls">
+          <button class="qty-btn" onclick="changeQty(${item.id},-10)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${item.id},10)">+</button>
+          <span style="font-size:11px;color:#9ca3af">unidades</span>
+          <button class="cart-item-remove" onclick="removeFromCart(${item.id})">🗑</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  const summary=document.getElementById('cartSummary');
+  let rows=cart.map(item=>{
+    const pr=getPrice(item.prices,item.qty);
+    const price=pr?`${item.qty} × desde ${pr[1]} Bs`:'Precio a consultar';
+    return `<div class="cart-summary-row"><span>${item.name}</span><span>${price}</span></div>`;
+  }).join('');
+  const totalItems=cart.reduce((s,i)=>s+i.qty,0);
+  summary.innerHTML=rows+`<div class="cart-summary-row total"><span>Total unidades</span><span>${totalItems} prendas</span></div>`;
+}
+
+function openCart(){
+  document.getElementById('cartPanel').classList.add('open');
+  document.getElementById('cartOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeCart(){
+  document.getElementById('cartPanel').classList.remove('open');
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function sendCartWA(){
+  if(!cart.length)return;
+  let msg='Hola, quiero hacer un pedido de Lemus Textiles:\n\n';
+  cart.forEach(item=>{
+    const pr=getPrice(item.prices,item.qty);
+    const price=pr?`desde ${pr[1]} Bs s/fact c/u`:'precio a consultar';
+    msg+=`🛍 ${item.name} × ${item.qty} uds — ${price}\n`;
+  });
+  const total=cart.reduce((s,i)=>s+i.qty,0);
+  msg+=`\n📦 Total: ${total} prendas\n\nPor favor confirmen disponibilidad, tallas y forma de pago. ¡Gracias!`;
+  window.open(`https://wa.me/59176414777?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
+function openModal(id,name,cat,imgSrc,emoji){
+  const d=productDetails[id]||{};
+  const wrap=document.getElementById('modalImgWrap');
+  wrap.innerHTML=imgSrc?`<img class="modal-img" src="${imgSrc}" alt="${name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="modal-img-placeholder" style="display:none">${emoji}</div>`:`<div class="modal-img-placeholder">${emoji}</div>`;
+  document.getElementById('modalCat').textContent=cat;
+  document.getElementById('modalTitle').textContent=name;
+  document.getElementById('modalDesc').textContent=d.desc||'';
+  const fl=document.getElementById('modalFeatures');
+  fl.innerHTML=(d.features||[]).map(f=>`<li>${f}</li>`).join('');
+  const pt=document.getElementById('modalPriceTable');
+  if(d.prices&&d.prices.length){
+    document.getElementById('modalPriceTitle').innerHTML='💰 Precios por volumen <span style="font-size:11px;color:#6b7280;font-weight:400">(Bs.)</span>';
+    pt.innerHTML=`<thead><tr><th>Unidad</th><th>S/factura</th><th>C/factura</th></tr></thead><tbody>${d.prices.map(r=>`<tr><td>${r[0]}</td><td><strong>${r[1]}</strong></td><td><strong>${r[2]}</strong></td></tr>`).join('')}</tbody>`;
+  } else {
+    document.getElementById('modalPriceTitle').textContent='';
+    pt.innerHTML='';
+  }
+  document.getElementById('modalNote').textContent=d.note||'Pedido mínimo 20 unidades · Envío a coordinar';
+        document.getElementById('modalWaBtn').onclick=()=>cotizarProducto(name);
+  // Botón agregar al carrito
+  const existingCartBtn=document.getElementById('modalCartBtn');
+  if(existingCartBtn)existingCartBtn.remove();
+  const cartBtn=document.createElement('button');
+  cartBtn.id='modalCartBtn';
+  cartBtn.innerHTML='🛒 Agregar al carrito';
+  cartBtn.style.cssText='width:100%;padding:13px;background:#1a3a8f;color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:10px;transition:background .2s';
+  cartBtn.onmouseover=()=>cartBtn.style.background='#1e4fc2';
+  cartBtn.onmouseout=()=>cartBtn.style.background='#1a3a8f';
+  cartBtn.onclick=()=>{addToCart(id,name,cat,imgSrc,emoji);closeModal();};
+  document.getElementById('modalWaBtn').before(cartBtn);
+  document.getElementById('productModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeModal(){
+  document.getElementById('productModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
 const B="https://lemus-textiles.odoo.com/web/image/product.product/";
 const products=[
   {id:3,name:"Mochila corporativa",cat:"mochilas",img:B+"3/image_1024/Mochila%20corporativa?unique=5d0f39b",emoji:"🎒"},
@@ -521,13 +850,13 @@ function renderProducts(){
   const grid=document.getElementById('productsGrid');
   const filtered=activeCat==='all'?products:products.filter(p=>p.cat===activeCat);
   grid.innerHTML=filtered.map(p=>`
-    <div class="product-card">
+    <div class="product-card" onclick="openModal(${p.id},'${p.name}','${catLabel(p.cat)}','${p.img}','${p.emoji}')">
       <img class="product-img" src="${p.img}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
       <div class="product-img-placeholder" style="display:none">${p.emoji}</div>
       <div class="product-info">
         <div class="product-cat">${catLabel(p.cat)}</div>
         <div class="product-name">${p.name}</div>
-        <button class="product-btn" onclick="cotizarProducto('${p.name}')">💬 Cotizar este producto</button>
+        <button class="product-btn" onclick="event.stopPropagation();cotizarProducto('${p.name}')">💬 Cotizar este producto</button>
       </div>
     </div>
   `).join('');
